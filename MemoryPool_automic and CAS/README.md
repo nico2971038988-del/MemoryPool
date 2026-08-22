@@ -1,4 +1,4 @@
-# MemoryPool ¡ª Atomic & CAS Based Memory Pool in C++
+# MemoryPool â€” Atomic & CAS Based Memory Pool in C++
 
 A lightweight fixed-size memory pool implemented in modern C++.
 
@@ -21,15 +21,15 @@ The current implementation combines:
 
 ```text
 MemoryPool/
-©¦
-©À©¤©¤ include/
-©¦   ©¸©¤©¤ MemoryPool.h
-©¦
-©À©¤©¤ src/
-©¦   ©À©¤©¤ MemoryPool.cpp
-©¦   ©¸©¤©¤ main.cpp
-©¦
-©¸©¤©¤ README.md
+â”‚
+â”œâ”€â”€ include/
+â”‚   â””â”€â”€ MemoryPool.h
+â”‚
+â”œâ”€â”€ src/
+â”‚   â”œâ”€â”€ MemoryPool.cpp
+â”‚   â””â”€â”€ main.cpp
+â”‚
+â””â”€â”€ README.md
 ```
 
 `MemoryPool.h` contains the main data structures, class declarations, `HashBucket`, and template helpers.
@@ -549,7 +549,7 @@ Tests were performed using 32-byte allocations.
 
 ---
 
-## Benchmark 1 ¡ª Batch Allocation
+## Benchmark 1 â€” Batch Allocation
 
 Workload:
 
@@ -597,14 +597,14 @@ as fast as the system allocator.
 Measured execution time was approximately 13.7% lower:
 
 ```text
-(3562 - 3073) / 3562 ¡Ö 13.7%
+(3562 - 3073) / 3562 â‰ˆ 13.7%
 ```
 
 This workload benefits from block-based allocation because many small allocations can be served by sequentially advancing through preallocated blocks.
 
 ---
 
-## Benchmark 2 ¡ª Immediate Reuse
+## Benchmark 2 â€” Immediate Reuse
 
 The second benchmark used a different allocation pattern:
 
@@ -640,7 +640,7 @@ In this workload, the custom allocator was slower than the system allocator.
 The system allocator completed the benchmark approximately:
 
 ```text
-3084 / 2604 ¡Ö 1.18x
+3084 / 2604 â‰ˆ 1.18x
 ```
 
 as fast as the custom memory pool.
